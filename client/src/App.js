@@ -22,7 +22,7 @@ import Signup from './pages/Signup';
 import Nav from './components/Nav';
 
 // TODO: remove the line below because we will use 'Provider' from react-redux instead
-import { StoreProvider } from './utils/GlobalState';
+// import { StoreProvider } from './utils/GlobalState';
 
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
@@ -52,7 +52,7 @@ function App() {
       <Router>
         <div>
           {/* TODO?: replace 'StoreProvider' with 'Provider' from react-redux and add an attribute 'store' and assign the store variable as its value */}
-          <Provider>
+          <Provider store={store}>
             <Nav />
             <Switch>
               <Route exact path="/" component={Home} />
