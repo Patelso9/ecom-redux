@@ -9,8 +9,10 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 // Importing Provider and store in this file. As such we do not need the GlobalState.js file
-// TODO: import { Provider } from 'react-redux';
-// TODO: import store from './utils/store';
+// TODO: 
+import { Provider } from 'react-redux';
+// TODO: 
+import store from './utils/store';
 
 import Home from './pages/Home';
 import Detail from './pages/Detail';
@@ -49,8 +51,8 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-          {/* TODO: replace 'StoreProvider' with 'Provider' from react-redux and add an attribute 'store' and assign the store variable as its value */}
-          <StoreProvider>
+          {/* TODO?: replace 'StoreProvider' with 'Provider' from react-redux and add an attribute 'store' and assign the store variable as its value */}
+          <Provider>
             <Nav />
             <Switch>
               <Route exact path="/" component={Home} />
@@ -61,7 +63,7 @@ function App() {
               <Route exact path="/products/:id" component={Detail} />
               <Route component={NoMatch} />
             </Switch>
-          </StoreProvider>
+          </Provider>
         </div>
       </Router>
     </ApolloProvider>
