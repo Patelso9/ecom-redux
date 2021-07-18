@@ -1,6 +1,7 @@
 //TODO: remove the line below, import { useReducer } from 'react', because we will not use the 'useReducer' hook to generate [ state, dispatch ]
 // state and dispatch will be generated using react-redux hooks, useSelector and useDispatch in the conmponents
 // import { useReducer } from 'react';
+
 import {
   UPDATE_PRODUCTS,
   ADD_TO_CART,
@@ -110,4 +111,5 @@ export const reducers = (state = initialState, action) => {
 //   return useReducer(reducer, initialState);  // const [ state, dispatch ] = useProductReducer()
 // }
 //TODO: Create a default export to export reducers
+
 export default reducers; 

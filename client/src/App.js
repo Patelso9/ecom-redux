@@ -8,6 +8,7 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
+
 // Importing Provider and store in this file. As such we do not need the GlobalState.js file
 // TODO: 
 import { Provider } from 'react-redux';
